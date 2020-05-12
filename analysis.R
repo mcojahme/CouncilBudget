@@ -11,6 +11,6 @@ df <- raw.df %>%
   transform(Councillor = reorder(Councillor, Expenses))
 
 plot <- ggplot(df) + 
-  geom_bar(aes(x=Councillor, y=Expenses,fill="pink"), stat="identity") +
+  geom_bar(aes(x=Councillor, y=Expenses), stat="identity") +
   xlab("") + ylab("Total Expenses (Dollars)") + coord_flip()
 print(plot)
